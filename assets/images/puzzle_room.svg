@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <!-- Gradients for realistic atmosphere -->
+    <radialGradient id="chandelierGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#fff8db" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#f3df9b" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#c9a85c" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fireGlow" cx="30%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff9e00" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#d90429" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#70e000" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#38b000" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wallGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141a29"/>
+      <stop offset="50%" stop-color="#221e2f"/>
+      <stop offset="100%" stop-color="#1b1622"/>
+    </linearGradient>
+    <linearGradient id="floorGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3d2212"/>
+      <stop offset="100%" stop-color="#1f1008"/>
+    </linearGradient>
+    <linearGradient id="rugGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#780000"/>
+      <stop offset="50%" stop-color="#9d0208"/>
+      <stop offset="100%" stop-color="#590004"/>
+    </linearGradient>
+  </defs>
+
+  <!-- BACKGROUND WALL & FLOOR -->
+  <rect x="0" y="0" width="600" height="400" fill="url(#wallGradient)"/>
+  <rect x="0" y="400" width="600" height="200" fill="url(#floorGradient)"/>
+
+  <!-- Floorboard Lines (Bottom Area) -->
+  <g stroke="#120a05" stroke-width="2" opacity="0.6">
+    <line x1="0" y1="430" x2="600" y2="430"/>
+    <line x1="0" y1="465" x2="600" y2="465"/>
+    <line x1="0" y1="505" x2="600" y2="505"/>
+    <line x1="0" y1="550" x2="600" y2="550"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TILE 0: TOP-LEFT (0,0 to 200,200) -> Gothic Stained Glass Window -->
+  <!-- ============================================================ -->
+  <g id="tile-top-left">
+    <!-- Window Frame Arch -->
+    <path d="M 30,200 L 30,100 Q 100,10 170,100 L 170,200 Z" fill="#0b0f19" stroke="#d4af37" stroke-width="4"/>
+    <!-- Stained glass segments with moonlight -->
+    <path d="M 35,100 Q 100,20 165,100 Z" fill="#2a4365" opacity="0.85"/>
+    <path d="M 40,105 L 95,195 L 40,195 Z" fill="#4c1d95" opacity="0.75"/>
+    <path d="M 160,105 L 105,195 L 160,195 Z" fill="#1e3a8a" opacity="0.75"/>
+    <circle cx="100" cy="80" r="22" fill="#38bdf8" opacity="0.6"/>
+    <!-- Window dividers -->
+    <line x1="100" y1="20" x2="100" y2="195" stroke="#d4af37" stroke-width="3"/>
+    <line x1="30" y1="100" x2="170" y2="100" stroke="#d4af37" stroke-width="3"/>
+    <line x1="30" y1="150" x2="170" y2="150" stroke="#d4af37" stroke-width="3"/>
+    <!-- Crescent Moon inside window -->
+    <path d="M 90,65 A 14,14 0 1,0 110,85 A 12,12 0 1,1 90,65 Z" fill="#fef08a"/>
+    <!-- Rain streaks outside -->
+    <line x1="50" y1="40" x2="40" y2="70" stroke="#93c5fd" stroke-width="1.5" opacity="0.5"/>
+    <line x1="140" y1="50" x2="130" y2="80" stroke="#93c5fd" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TILE 1: TOP-CENTER (200,0 to 400,200) -> Grand Glowing Chandelier -->
+  <!-- ============================================================ -->
+  <g id="tile-top-center">
+    <!-- Ceiling Rose & Chain -->
+    <circle cx="300" cy="15" r="30" fill="#2d2212" stroke="#c9a85c" stroke-width="3"/>
+    <line x1="300" y1="15" x2="300" y2="70" stroke="#c9a85c" stroke-width="4"/>
+    <!-- Chandelier Amber Ambient Glow -->
+    <circle cx="300" cy="115" r="95" fill="url(#chandelierGlow)"/>
+    <!-- Chandelier Frame -->
+    <path d="M 230,105 Q 300,140 370,105 Q 300,75 230,105 Z" fill="#8c6d23" stroke="#fef08a" stroke-width="3"/>
+    <path d="M 250,110 Q 300,165 350,110" fill="none" stroke="#eab308" stroke-width="3"/>
+    <!-- Candle Pillars & Flames -->
+    <!-- Candle 1 -->
+    <rect x="235" y="80" width="8" height="25" fill="#fef9c3" rx="2"/>
+    <ellipse cx="239" cy="74" rx="4" ry="7" fill="#f97316"/>
+    <ellipse cx="239" cy="75" rx="2" ry="4" fill="#fef08a"/>
+    <!-- Candle 2 -->
+    <rect x="270" y="85" width="8" height="25" fill="#fef9c3" rx="2"/>
+    <ellipse cx="274" cy="79" rx="4" ry="7" fill="#f97316"/>
+    <ellipse cx="274" cy="80" rx="2" ry="4" fill="#fef08a"/>
+    <!-- Candle 3 (Center) -->
+    <rect x="296" y="70" width="8" height="30" fill="#fef9c3" rx="2"/>
+    <ellipse cx="300" cy="63" rx="5" ry="8" fill="#f97316"/>
+    <ellipse cx="300" cy="64" rx="2.5" ry="5" fill="#fef08a"/>
+    <!-- Candle 4 -->
+    <rect x="322" y="85" width="8" height="25" fill="#fef9c3" rx="2"/>
+    <ellipse cx="326" cy="79" rx="4" ry="7" fill="#f97316"/>
+    <ellipse cx="326" cy="80" rx="2" ry="4" fill="#fef08a"/>
+    <!-- Candle 5 -->
+    <rect x="357" y="80" width="8" height="25" fill="#fef9c3" rx="2"/>
+    <ellipse cx="361" cy="74" rx="4" ry="7" fill="#f97316"/>
+    <ellipse cx="361" cy="75" rx="2" ry="4" fill="#fef08a"/>
+    <!-- Hanging Crystals -->
+    <polygon points="300,165 295,185 300,195 305,185" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
+    <polygon points="265,135 261,150 265,158 269,150" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
+    <polygon points="335,135 331,150 335,158 339,150" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TILE 2: TOP-RIGHT (400,0 to 600,200) -> Grandfather Clock -->
+  <!-- ============================================================ -->
+  <g id="tile-top-right">
+    <!-- Clock Top Crown & Carving -->
+    <path d="M 440,50 Q 500,10 560,50 L 560,80 L 440,80 Z" fill="#3c1d0a" stroke="#c9a85c" stroke-width="3"/>
+    <circle cx="500" cy="40" r="10" fill="#c9a85c"/>
+    <!-- Clock Case Upper Body -->
+    <rect x="445" y="80" width="110" height="120" fill="#4a240d" stroke="#c9a85c" stroke-width="3"/>
+    <!-- Clock Face Outer Brass -->
+    <circle cx="500" cy="140" r="45" fill="#c9a85c" stroke="#fff" stroke-width="2"/>
+    <circle cx="500" cy="140" r="38" fill="#fdfbf7"/>
+    <!-- Clock Numbers / Roman Numerals markers -->
+    <circle cx="500" cy="107" r="3" fill="#1e1e1e"/>
+    <circle cx="533" cy="140" r="3" fill="#1e1e1e"/>
+    <circle cx="500" cy="173" r="3" fill="#1e1e1e"/>
+    <circle cx="467" cy="140" r="3" fill="#1e1e1e"/>
+    <!-- Clock Hands at 11:45 (Midnight crime time!) -->
+    <line x1="500" y1="140" x2="492" y2="114" stroke="#8b0000" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="500" y1="140" x2="472" y2="138" stroke="#1e1e1e" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="500" cy="140" r="4" fill="#8b0000"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TILE 3: MIDDLE-LEFT (0,200 to 200,400) -> Fireplace & Painting -->
+  <!-- ============================================================ -->
+  <g id="tile-middle-left">
+    <!-- Ornate Framed Painting Above Fireplace -->
+    <rect x="35" y="210" width="130" height="75" fill="#1a1423" stroke="#eab308" stroke-width="5" rx="3"/>
+    <!-- Portrait of Sir Hugh inside frame -->
+    <rect x="45" y="220" width="110" height="55" fill="#312e81"/>
+    <circle cx="100" cy="245" r="16" fill="#fcd34d"/>
+    <path d="M 85,270 Q 100,250 115,270 Z" fill="#991b1b"/>
+    <!-- Fireplace Stone Mantel -->
+    <rect x="20" y="295" width="160" height="20" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="35" y="315" width="130" height="85" fill="#0f172a" stroke="#334155" stroke-width="3"/>
+    <!-- Fire Glow & Flames -->
+    <circle cx="100" cy="365" r="45" fill="url(#fireGlow)"/>
+    <path d="M 70,390 Q 85,330 100,350 Q 115,320 130,390 Z" fill="#ea580c"/>
+    <path d="M 82,390 Q 95,345 102,360 Q 110,335 120,390 Z" fill="#facc15"/>
+    <!-- Fireplace logs & iron grate -->
+    <rect x="65" y="385" width="70" height="10" fill="#271306" rx="3"/>
+    <line x1="50" y1="365" x2="50" y2="400" stroke="#000" stroke-width="3"/>
+    <line x1="150" y1="365" x2="150" y2="400" stroke="#000" stroke-width="3"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TILE 4: CENTER (200,200 to 400,400) -> Desk, Banker Lamp & Clues -->
+  <!-- ============================================================ -->
+  <g id="tile-center">
+    <!-- Mahogany Desk Body -->
+    <rect x="220" y="270" width="160" height="120" fill="#451a03" stroke="#78350f" stroke-width="4" rx="4"/>
+    <rect x="235" y="330" width="50" height="50" fill="#270e02" stroke="#92400e" stroke-width="2"/>
+    <rect x="315" y="330" width="50" height="50" fill="#270e02" stroke="#92400e" stroke-width="2"/>
+    <circle cx="260" cy="355" r="3" fill="#fef08a"/>
+    <circle cx="340" cy="355" r="3" fill="#fef08a"/>
+    <!-- Green Banker's Lamp -->
+    <circle cx="250" cy="245" r="35" fill="url(#lampGlow)"/>
+    <rect x="246" y="245" width="8" height="25" fill="#d4af37"/>
+    <path d="M 235,245 Q 250,230 265,245 Z" fill="#15803d" stroke="#14532d" stroke-width="2"/>
+    <circle cx="250" cy="270" r="10" fill="#d4af37"/>
+    <!-- Crime Documents on Desk -->
+    <polygon points="280,265 330,260 340,285 290,290" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+    <line x1="290" y1="270" x2="325" y2="267" stroke="#713f12" stroke-width="1.5"/>
+    <line x1="293" y1="277" x2="328" y2="274" stroke="#713f12" stroke-width="1.5"/>
+    <!-- Blood Drop on Document! -->
+    <circle cx="315" cy="278" r="4" fill="#991b1b"/>
+    <!-- Magnifying Glass -->
+    <circle cx="350" cy="280" r="14" fill="#bae6fd" opacity="0.7" stroke="#d4af37" stroke-width="3"/>
+    <line x1="360" y1="290" x2="378" y2="308" stroke="#78350f" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TILE 5: MIDDLE-RIGHT (400,200 to 600,400) -> Bookshelf & Skull -->
+  <!-- ============================================================ -->
+  <g id="tile-middle-right">
+    <!-- Clock Lower Case Pendulum Body (Left part of this tile) -->
+    <rect x="455" y="200" width="90" height="190" fill="#3c1d0a" stroke="#c9a85c" stroke-width="3"/>
+    <circle cx="500" cy="280" r="16" fill="#eab308" stroke="#a16207" stroke-width="2"/>
+    <line x1="500" y1="200" x2="500" y2="280" stroke="#ca8a04" stroke-width="3"/>
+    <!-- Bookshelf (Right side of tile 5) -->
+    <rect x="555" y="200" width="45" height="200" fill="#2e1005" stroke="#78350f" stroke-width="3"/>
+    <!-- Shelf 1 (Top) with colorful books -->
+    <rect x="560" y="215" width="8" height="50" fill="#dc2626"/>
+    <rect x="570" y="220" width="10" height="45" fill="#2563eb"/>
+    <rect x="582" y="210" width="12" height="55" fill="#16a34a"/>
+    <line x1="555" y1="270" x2="600" y2="270" stroke="#78350f" stroke-width="4"/>
+    <!-- Shelf 2 with gold book & mysterious vial -->
+    <rect x="560" y="285" width="14" height="45" fill="#ca8a04"/>
+    <rect x="576" y="290" width="8" height="40" fill="#9333ea"/>
+    <!-- Poison Vial -->
+    <path d="M 588,305 L 594,305 L 596,325 L 586,325 Z" fill="#22c55e" stroke="#fff" stroke-width="1"/>
+    <line x1="555" y1="335" x2="600" y2="335" stroke="#78350f" stroke-width="4"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TILE 6: BOTTOM-LEFT (0,400 to 200,600) -> Persian Rug Corner -->
+  <!-- ============================================================ -->
+  <g id="tile-bottom-left">
+    <!-- Fireplace Base & Hearth Stones -->
+    <rect x="15" y="400" width="170" height="15" fill="#334155" stroke="#64748b" stroke-width="2"/>
+    <!-- Ornate Persian Rug (Left Curve & Fringes) -->
+    <path d="M 80,415 Q 150,420 200,435 L 200,600 L 40,600 Q 50,500 80,415 Z" fill="url(#rugGradient)" stroke="#d4af37" stroke-width="4"/>
+    <!-- Golden Fringes on Rug Border -->
+    <g stroke="#facc15" stroke-width="2" opacity="0.8">
+      <line x1="75" y1="420" x2="65" y2="415"/>
+      <line x1="70" y1="440" x2="60" y2="435"/>
+      <line x1="65" y1="465" x2="55" y2="460"/>
+      <line x1="60" y1="495" x2="50" y2="490"/>
+      <line x1="55" y1="530" x2="45" y2="525"/>
+      <line x1="48" y1="565" x2="38" y2="560"/>
+    </g>
+    <!-- Intricate Rug Geometric Corner Pattern -->
+    <polygon points="120,460 170,450 160,510 110,500" fill="#590004" stroke="#facc15" stroke-width="2"/>
+    <circle cx="135" cy="480" r="10" fill="#facc15"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TILE 7: BOTTOM-CENTER (200,400 to 400,600) -> Rug Medallion, Key & Blood -->
+  <!-- ============================================================ -->
+  <g id="tile-bottom-center">
+    <!-- Central Persian Rug Field -->
+    <rect x="200" y="420" width="200" height="180" fill="url(#rugGradient)"/>
+    <!-- Big Golden Medallion in Center of Rug -->
+    <ellipse cx="300" cy="510" rx="65" ry="45" fill="#590004" stroke="#facc15" stroke-width="4"/>
+    <ellipse cx="300" cy="510" rx="45" ry="30" fill="#780000" stroke="#fef08a" stroke-width="2"/>
+    <circle cx="300" cy="510" r="14" fill="#facc15"/>
+    <!-- Golden Skeleton Key (Crime Evidence!) -->
+    <g transform="translate(260, 485) rotate(-30)">
+      <circle cx="20" cy="20" r="8" fill="none" stroke="#fde047" stroke-width="3"/>
+      <line x1="28" y1="20" x2="60" y2="20" stroke="#fde047" stroke-width="4"/>
+      <line x1="52" y1="20" x2="52" y2="28" stroke="#fde047" stroke-width="3"/>
+      <line x1="58" y1="20" x2="58" y2="28" stroke="#fde047" stroke-width="3"/>
+    </g>
+    <!-- Dropped Bloody White Handkerchief -->
+    <polygon points="340,535 370,520 380,555 350,565" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+    <circle cx="360" cy="542" r="5" fill="#991b1b"/>
+    <circle cx="366" cy="548" r="3" fill="#b91c1c"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TILE 8: BOTTOM-RIGHT (400,400 to 600,600) -> Footprints & Velvet Curtain -->
+  <!-- ============================================================ -->
+  <g id="tile-bottom-right">
+    <!-- Clock Base Plinth -->
+    <rect x="440" y="400" width="120" height="25" fill="#2d1205" stroke="#c9a85c" stroke-width="3"/>
+    <!-- Right Rug Border -->
+    <path d="M 400,420 Q 450,425 470,500 L 460,600 L 400,600 Z" fill="url(#rugGradient)" stroke="#d4af37" stroke-width="3"/>
+    <!-- Bloody Footprints on Wood Floor! Leading to escape -->
+    <!-- Footprint 1 -->
+    <g transform="translate(485, 450) rotate(25)">
+      <ellipse cx="10" cy="15" rx="7" ry="12" fill="#7f1d1d" opacity="0.85"/>
+      <circle cx="10" cy="31" r="5" fill="#7f1d1d" opacity="0.85"/>
+    </g>
+    <!-- Footprint 2 -->
+    <g transform="translate(525, 520) rotate(35)">
+      <ellipse cx="10" cy="15" rx="7" ry="12" fill="#991b1b" opacity="0.9"/>
+      <circle cx="10" cy="31" r="5" fill="#991b1b" opacity="0.9"/>
+    </g>
+    <!-- Velvet Escape Curtain (Right Edge) -->
+    <path d="M 560,400 Q 545,500 550,600 L 600,600 L 600,400 Z" fill="#4c0519" stroke="#9f1239" stroke-width="3"/>
+    <path d="M 575,400 Q 565,500 570,600" fill="none" stroke="#fb7185" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Subtle 3x3 Grid Outline (Very subtle guide for preview) -->
+  <g stroke="#ffffff" stroke-width="1" opacity="0.15" stroke-dasharray="6,6">
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/>
+    <line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="400" x2="600" y2="400"/>
+  </g>
+</svg>
